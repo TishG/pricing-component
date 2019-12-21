@@ -115,6 +115,11 @@ main .my-card .card-content button {
   height: 45px;
 }
 
+main .my-card .my-card:nth-of-type(2) hr {
+  color: white;
+  background-color: white;
+}
+
 @media (min-width: 1200px) {
   body {
     background-image: url("../images/bg-top.svg"), url("../images/bg-bottom.svg");
@@ -143,6 +148,27 @@ main .my-card .card-content button {
   body main .my-card:nth-of-type(3) {
     border-radius: 0 0.5em 0.5em 0;
     padding: 0 1em;
+  }
+}
+
+/* IE10+ CSS styles go here */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .my-card:nth-of-type(2) p,
+  .my-card:nth-of-type(2) h1 {
+    color: black;
+  }
+  .my-card:nth-of-type(2) button {
+    color: #26a69a;
+  }
+  .my-card:nth-of-type(2) {
+    background-color: white;
+  }
+}
+
+@media (min-width: 1200px) and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  main {
+    position: relative;
+    left: -6em;
   }
 }
 /*# sourceMappingURL=main.css.map */

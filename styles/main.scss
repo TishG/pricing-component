@@ -100,6 +100,12 @@ main {
         height: 45px;
       }
     }
+    .my-card:nth-of-type(2) {
+      hr {
+        color: white;
+        background-color: white;
+      }
+    }
   }
 }
 
@@ -127,5 +133,28 @@ main {
         padding: 0 1em;
       }
     }
+  }
+}
+
+/* IE10+ CSS styles go here */
+@media all and (-ms-high-contrast: none),
+  (-ms-high-contrast: active) {
+  .my-card:nth-of-type(2) p,
+  .my-card:nth-of-type(2) h1 {
+    color: black;
+  }
+  .my-card:nth-of-type(2) button {
+    color: rgb(38, 166, 154);
+  }
+  .my-card:nth-of-type(2) {
+    background-color: white;
+  }
+}
+
+@media (min-width: 1200px) and (-ms-high-contrast: none),
+  (-ms-high-contrast: active) {
+  main {
+    position: relative;
+    left: -6em;
   }
 }
