@@ -137,8 +137,7 @@ main {
 }
 
 /* IE10+ CSS styles go here */
-@media all and (-ms-high-contrast: none),
-  (-ms-high-contrast: active) {
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   .my-card:nth-of-type(2) p,
   .my-card:nth-of-type(2) h1 {
     color: black;
