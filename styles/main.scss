@@ -52,6 +52,14 @@ body {
     background: var(--purple-color-gradient);
     height: 20px;
   }
+  .switch label .lever:before {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
   .switch label input[type="checkbox"]:checked + .lever:after,
   .switch label .lever:after {
     background-color: white;
@@ -135,6 +143,14 @@ main {
     }
   }
 }
+// .off-screen {
+//   position: absolute;
+//   left: -10000px;
+//   top: auto;
+//   width: 1px;
+//   height: 1px;
+//   overflow: hidden;
+// }
 
 /* IE10+ CSS styles go here */
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {

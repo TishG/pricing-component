@@ -8,7 +8,7 @@
 
 * {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -55,11 +55,16 @@ body {
   height: 20px;
 }
 
-.pricing-toggler-section
-  .switch
-  label
-  input[type="checkbox"]:checked
-  + .lever:after,
+.pricing-toggler-section .switch label .lever:before {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.pricing-toggler-section .switch label input[type="checkbox"]:checked + .lever:after,
 .pricing-toggler-section .switch label .lever:after {
   background-color: white;
   height: 15px;
@@ -85,11 +90,11 @@ main {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 main .my-card {
@@ -126,8 +131,7 @@ main .my-card .my-card:nth-of-type(2) hr {
 
 @media (min-width: 1200px) {
   body {
-    background-image: url("../images/bg-top.svg"),
-      url("../images/bg-bottom.svg");
+    background-image: url("../images/bg-top.svg"), url("../images/bg-bottom.svg");
     background-position: right top, bottom left;
     background-repeat: no-repeat, no-repeat;
   }
@@ -137,11 +141,11 @@ main .my-card .my-card:nth-of-type(2) hr {
   body main {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   body main .my-card:nth-of-type(1) {
     border-radius: 0.5em 0 0 0.5em;
@@ -170,8 +174,7 @@ main .my-card .my-card:nth-of-type(2) hr {
   }
 }
 
-@media (min-width: 1200px) and (-ms-high-contrast: none),
-  (-ms-high-contrast: active) {
+@media (min-width: 1200px) and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   main {
     position: relative;
     left: -6em;
